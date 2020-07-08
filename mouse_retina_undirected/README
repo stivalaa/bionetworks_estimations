@@ -1,0 +1,65 @@
+
+IMPORTANT: note that these results are using SMNet for undirected
+networks (not EstimNetDirected for directed networks) as 
+on closer inspection of the paper and supplementary material, the
+network is really UNDIRECTED, not directed at all, despite this
+information and the GraphML data -- examining the adjacency matrix in
+the Excel spreadsheet from the supplementary material, it is
+symmetric, the direction of arcs is completely spurious.
+
+ADS 15 May 2019.
+
+
+Estimation of
+network of neurons and their mutual contacts for the mouse inner plexiform layer (retina)
+ downloaded from
+
+https://neurodata.io/project/connectomes/
+https://s3.amazonaws.com/connectome-graphs/mouse/mouse_retina_1.graphml
+
+on 29 April 2019
+
+Found via Index of Complex Networks https://icon.colorado.edu/#!/networks
+with query
+(NOT bipartite) AND biological AND directed AND nodes:>=1000
+
+
+Mouse retina (2013)
+Biological
+Connectome
+Description
+Network of neurons and their mutual contacts for the mouse inner plexiform layer (retina)
+Network summary
+Edge Type
+Interaction
+Node Type
+Neuron
+Avg Edges
+577,350.00
+Avg Nodes
+1,123.00
+Graph properties
+Directed, Weighted, Locations, Metadata
+Citation
+M. Helmstaedter et al., "Connectomic reconstruction of the inner plexiform layer in the mouse retina." Nature 500, 168-174 (2013) Link
+Hosted by
+Data obtained by combining crowd-sourcing with machine learning volume segmentation of serial block-face electron microscopy data Includes spatial position of nodes within 3d brain space, nodes are labeled by cell type, and interactions are weighted by the area of contact Data hosted by the OpenConnectome project
+Network data
+Name	Nodes	Edges	File Size	File Type	Format	Source
+(Mouse) Mouse_retina_1	1123	577350	117.10mb	txt	graphML	Link
+
+
+
+ADS.
+
+
+https://neurodata.io/project/connectomes/
+
+
+Mouse
+Download URL	Region	# Nodes	# Edges	Graph Attrs	Node Attrs	Edge Attrs	Sensor	Project	Source Host URL
+Mouse_brain_1	brain	213	21807	source, region, DOI, sensor	name, id	w_contra_weight, pvalue_contra_weight, w_ipsi_weight, pvalue_ipsi_weight	Enhanced green fluorescent protein	—	nature.com/nature...
+Mouse_retina_1	retina	1123	577350	source, region, sensor	name, designation, macneil_type, certainty, volgyi_type, coarse, y, x, z, id	y, x, z, area	Electron Microscopy	—	github.com/ericmj...
+Kasthuri_graph_v4	—	1029	1700	—	id, vid	direction, synapse_id	—	—	—
+Mouse_visual.cortex_1	cerebral cortex	29	44	info, source, region, DOI, sensor	type1, id, type2	weight	Electron microscopy	—	nature.com/nature...
+Mouse_visual.cortex_2	cerebral cortex	195	214	info, DOI, region, source, key, sensor	type1, id, type2	weight	Electron microscopy	—	nature.com/nature...

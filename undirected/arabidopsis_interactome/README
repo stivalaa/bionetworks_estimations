@@ -1,0 +1,36 @@
+
+Network of protein-protein interation among Arabidopsis Thaliana
+proteins.
+
+http://interactome.dfci.harvard.edu/A_thaliana/index.php?page=download
+
+Arabidopsis Interactome, version 1 (AI-1)
+
+Dataset	Description
+Arabidopsis protein-protein interactions	All protein-protein interactions from AI-1 and literature databases *
+Reference sets	Positive and random reference sets
+Space 1 proteins	List of Space 1 proteins
+
+
+* AI-1 interactions coming from AI-1 MAIN (AI1_M) and the AI-1 REPEAT (AI1_R) are distinguished. Subsets of intreractions coming from the literature (LCI) are highlighted: LCI BINARY (LCI_B) include only interactions binary (direct) interactions; LCI CORE (LCI_C) is a subset of LCI BINARY (LCI_B) including interactions supported by at least two publications or at least two experimental methods. See publication and supplementary material for more information.
+
+
+
+
+Download link 
+http://interactome.dfci.harvard.edu/A_thaliana/doc/AI_interactions.xls
+
+
+Reference:
+
+Arabidopsis Interactome Mapping Consortium. (Dreze M, Carvunis AR, 
+Charloteaux B, Galli M, Pevzner SJ, Tasan M co-first authors; 
+Braun P, Vidal M, Ecker JR, Hill DE co-corresponding authors)
+Evidence for network evolution in an Arabidopsis interactome map.
+Science 2011; 333:601-7.
+
+
+
+
+ADS
+Wed, Nov 16, 2016  2:08:33 PM

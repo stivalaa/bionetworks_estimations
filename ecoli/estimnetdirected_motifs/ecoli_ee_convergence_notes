@@ -1,0 +1,11 @@
+bad
+
+theta_ecoli1_self_binattr_a2p_noatc		EEsteps = 2000 [ok with EEsteps = 4000]
+theta_ecoli1_self_catattr_a2p   [AKT-C bad, running longer probably useless]
+theta_ecoli1_self_catattr				EEsteps = 2000 [AKT-c bad, 4000 still bad]
+
+good
+
+theta_ecoli1_self_binattr				EEsteps = 2000
+theta_ecoli1_self_catattr_a2p_noatc		EEsteps = 2000
+theta_ecoli1_structural					EEsteps = 2000

@@ -1,0 +1,28 @@
+SCRIPTDIR = .
+
+all:  bionetworks_smallworld_table.tex bionetworks_smallworldindex_table.tex bionetworks_smallworldindex_deggt1cc_table.tex bionetworks_giantcomponent_smallworld_table.tex bionetworks_giantcomponent_smallworldindex_table.tex bionetworks_giantcomponent_deggt1cc_smallworldindex_table.tex bionetworks_smallworldomega_table.tex
+
+
+bionetworks_smallworld_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldTexTable.R > $@
+
+bionetworks_smallworldindex_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R > $@
+
+bionetworks_smallworldindex_deggt1cc_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R -o > $@
+
+
+bionetworks_giantcomponent_smallworld_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldTexTable.R -c > $@
+
+bionetworks_giantcomponent_smallworldindex_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R -c > $@
+
+bionetworks_giantcomponent_deggt1cc_smallworldindex_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R -c -o > $@
+
+
+bionetworks_smallworldomega_table.tex: $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R
+	Rscript $(SCRIPTDIR)/makeBioNetworksSmallWorldIndexTexTable.R -w > $@
+
