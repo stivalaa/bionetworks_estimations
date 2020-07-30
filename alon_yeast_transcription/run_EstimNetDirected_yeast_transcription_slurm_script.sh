@@ -12,13 +12,15 @@ echo -n "started at: "; date
 ROOT=${HOME}/EstimNetDirected
 
 module load openmpi
-module load R
+echo "*** Remember must 'module load R/3.2.5' to get Microsoft R Open 3.2.5 otherwise nothing in R works! (doing that now) ***"
+echo
+module load R/3.2.5
 
 if [ ! -f EstimNetDirected_mpi -o ${ROOT}/src/EstimNetDirected_mpi -nt EstimNetDirected_mpi  ]; then
 	cp -p ${ROOT}/src/EstimNetDirected_mpi .
 fi
 
-time srun ./EstimNetDirected_mpi config_yeast_transcription.txt
+time mpirun ./EstimNetDirected_mpi config_yeast_transcription.txt
 
 time Rscript ${ROOT}/scripts/computeEstimNetDirectedCovariance.R theta_yeast_transcription dzA_yeast_transcription | tee estimation_yeast_transcription.out
 time Rscript ${ROOT}/scripts/plotEstimNetDirectedResults.R theta_yeast_transcription dzA_yeast_transcription

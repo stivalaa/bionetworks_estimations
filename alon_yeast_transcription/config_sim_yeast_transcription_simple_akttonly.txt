@@ -1,0 +1,93 @@
+##############################################################################
+#
+# setting file for simulation of Alon yeast regularotry network
+#
+# structural parameters only
+# 
+#
+#  note parameter and attribute names are not case sensitive (but filenames are)
+#
+
+
+numNodes = 688 # Number of nodes in directed graph
+
+
+################## Simulation settings #######################################
+
+sampleSize = 100 #number of network samples to take from simulation
+
+ 
+interval = 10000 # interval (iterations) between samples
+ 
+burnin = 5000000 # number of iterations to throw away before first sample
+
+outputSimulatedNetworks = True  # write the simulated networks to file
+
+
+
+#useIFDsampler = True # use the IFD sampler
+#numArcs = 1079 # fixed density for IFD sampler
+
+
+
+
+################## Input filenames ###########################################
+
+
+
+# Attribute files
+# binattr_file for binary attributes (0 or 1 only)
+# catattr_file for categorical attributes (any integer)
+# The format of the file is a header line with whitespace
+# delimited attribute names, and each subsequent line
+# the attribute values for each attribute.
+# The first line (after the header) has the values for
+# node 0, then the next line node 1, and so on.
+# 
+# E.g.:
+#
+# gender class
+# 0      1
+# 1      2
+# 1      3
+
+#binattrFile = 
+#catattrFile =
+
+
+################## Output filenames ##########################################
+
+# Filename of file to write statistics to
+
+statsFile = stats_sim_estimated_yeast_transcription_simple_akttonly.txt
+
+# Pajek .net file prefix for simulatd networks
+# Output filenames are constructed from the prefix specified here,
+# with _<i>.net added, where <i> is the iteration
+# So e.g. if simNetFilePrefix = sim then the output files are sim_10000.net etc.
+
+simNetFilePrefix = simulation_estimated_yeast_transcription_simple_akttonly
+
+
+################## Parameter values       ####################################
+
+#
+# Structural parameters
+#
+
+ # note no reciprocated arcs in data
+structParams =  {Arc                  = -10.57769,
+	         AltInStars           = 0.346533,
+		 AltOutStars          = 2.860092,
+		 Sink                 = 3.124136,
+		 Source               = 2.903333,
+                 AltKTrianglesT       =  1.227057}
+
+
+#
+# Attribute parameters
+#
+
+#attrParams = {Matching(value), MatchingReciprocity(value)}
+
+
