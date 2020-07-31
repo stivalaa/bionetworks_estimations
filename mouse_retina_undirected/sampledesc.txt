@@ -1,1 +1,0 @@
-1076 mouse_retina_zones.txt mouse_retina_edgelist.txt mouse_retina_nodeattrs.txt
