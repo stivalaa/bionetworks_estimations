@@ -27,7 +27,6 @@ source_local('plotPowerLaw.R')
 
 graphs <- c(
     "../ecoli/estimnetdirected/ecoli1_arclist.txt",
-    "../gerstein_ecoli/ecoli_arclist.txt",
     "../alon_yeast_transcription/yeast_transcription_arclist.txt",
     "../fly_medulla/model1/fly_medulla_arclist.txt"
     )
@@ -35,7 +34,6 @@ graphs <- c(
 # description of graph must line up with filename pattern above
 descrs <- c(
     expression('Alon'~~italic('E. coli')~~'regulatory'),
-    expression('Gerstein'~~italic('E. coli')~~'regulatory'),
     expression('Alon yeast regulatory'),
     expression(italic('Drosophila')~~'optic medulla')
     )
