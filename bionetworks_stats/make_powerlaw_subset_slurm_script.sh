@@ -8,9 +8,9 @@
  
 echo -n "Started at: "; date
 
-rm directed_bionetworks_powerlaw.eps
+rm directed_bionetworks_powerlaw_subset.eps
 
-time Rscript plotDirectedBioNetworksPowerLaw.R | tee directed_bionetworks_powerlaw.out
+time Rscript plotDirectedBioNetworksPowerLawSubset.R | tee directed_bionetworks_powerlaw_subset.out
 
 times
 echo -n "Finshed at: "; date

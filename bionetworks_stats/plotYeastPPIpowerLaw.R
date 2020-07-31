@@ -1,16 +1,16 @@
 #!/usr/bin/Rscript
 #
-# File:    plotMouseRetinaPowerLaw.R
+# File:    plotYeastPPIpowerLaw.R
 # Author:  Alex Stivala
 # Created: May 2019
 #
 # Plot power law and log-normal fit to biological networks degree distribution,
 # using the poweRlaw package (Gillespie 2015 J. Stat. Soft)
 #
-# Usage: Rscript plotMouseRetinaPowerLaw.R 
+# Usage: Rscript ploYeastPPIpowerLaw.R 
 #
 # Network file locations are hardcoded here.
-# Writes output to directed_bionetworks_powelawer.eps (WARNING: overwrites)
+# Writes output to yeast_ppi_powerlaw.eps (WARNING: overwrites)
 # and p-values etc. to stdout
 #
 
@@ -25,13 +25,14 @@ source_local <- function(fname){
 
 source_local('plotPowerLaw.R')
 
+
 graphs <- c(
-    "../mouse_retina_undirected/mouse_retina_1.graphml"
+    "../undirected/yeast/model1/yeast_edgelist.txt"
     )
 
 # description of graph must line up with filename pattern above
 descrs <- c(
-    expression('Mouse retina neural network')
+    "Yeast PPI"
     )
 
 
@@ -39,23 +40,29 @@ descrs <- c(
 args <- commandArgs(trailingOnly=TRUE)
 
 if (length(args) != 0) {
-  cat("Usage: plotMouseRetinaPowerLaw\n")
+  cat("Usage: plotUndirectedPowerLaw\n")
   quit(save="no")
 }
 datadir <- args[1]
 
-outfile <- "mouse_retina_powerlaw.eps"
+outfile <- "yeast_ppi_powerlaw.eps"
 postscript(outfile, onefile=FALSE,
            paper="special", horizontal=FALSE, width=9, height=6)
 #postscript(outfile, paper="special", horizontal=FALSE, width=9, height=6)
 par(mfrow=c(length(graphs), 1))
-#par(mar=c(2,2,2,2)) # https://stackoverflow.com/questions/23050928/error-in-plot-new-figure-margins-too-large-scatter-plot
 for (i in 1:length(graphs)) {
   cat(graphs[i])
   cat('\n')
-  g <- read.graph(graphs[i], format="graphml")
-  g <- as.undirected(g)
+
+  if (grepl("\\.graphml$", graphs[i])) {
+      g <- read.graph(graphs[i], format="graphml")
+      g <- as.undirected(g) # only for mouse retina
+  } else {
+      g <- read.graph(graphs[i], format="pajek")
+  }
   g <- simplify(g)
+
+
   plot_power_law(g, descrs[i], directed=FALSE)
   cat('\n')
   cat('\n')
