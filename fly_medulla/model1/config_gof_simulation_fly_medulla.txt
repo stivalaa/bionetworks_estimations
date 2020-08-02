@@ -3,11 +3,18 @@
 # On:  Linux icsmaster01 3.10.0-514.6.2.el7.x86_64 #1 SMP Thu Feb 23 03:04:39 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
 # arclistFile =  fly_medulla_arclist.txt
 # observedStatsFilePrefix = 
-numNodes = 1781
-useTNTsampler = True # use the tie-no-tie sampler
+
+#Digraph with 1781 vertics and 9630 arcs (density 0.00303768)
+
+numNodes = 1781 # Number of nodes in directed graph
+
+useIFDsampler = True # use the IFD sampler
+numArcs = 9630 # fixed density for IFD sampler
 sampleSize = 100 #number of network samples to take from simulation
 interval = 100000 # interval (iterations) between samples
-burnin = 1000000 # number of iterations to throw away before first sample
+burnin = 550000 # number of iterations to throw away before first sample
+#burnin = 500000 # number of iterations to throw away before first sample
+
 outputSimulatedNetworks = True
 #binattrFile = 
 #catattrFile =
