@@ -8,7 +8,9 @@ echo -n "started at: "; date
 
 ROOT=${HOME}/EstimNetDirected
 
-module load R
+echo "*** Remember must 'module load R/3.2.5' to get Microsoft R Open 3.2.5 otherwise nothing in R works! (doing that now) ***"
+echo
+module load R/3.2.5
 
 rm simulation_estimated_ecoli1_structural_*.net
 

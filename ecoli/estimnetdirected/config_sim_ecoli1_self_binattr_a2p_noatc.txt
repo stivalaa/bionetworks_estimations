@@ -8,26 +8,29 @@
 #  note parameter and attribute names are not case sensitive (but filenames are)
 #
 
-forbidReciprocity = True
+#Digraph with 423 vertics and 519 arcs (density 0.00290747)
 
 numNodes = 423 # Number of nodes in directed graph
 
 
 ################## Simulation settings #######################################
 
+
 sampleSize = 100 #number of network samples to take from simulation
 
  
 interval = 10000 # interval (iterations) between samples
  
-burnin = 50000 # number of iterations to throw away before first sample
+burnin = 10000 # number of iterations to throw away before first sample
 
 outputSimulatedNetworks = True  # write the simulated networks to file
 
 
-useIFDsampler = True # use the IFD sampler
-numArcs = 519 # fixed density for IFD sampler
 
+useTNTsampler = True # use the TNT sampler
+
+
+forbidReciprocity = True
 
 
 
