@@ -3,12 +3,17 @@
 #SBATCH --job-name="SimualateERGM_yeast_transcription_simple_akttonly"
 #SBATCH --ntasks=1
 #SBATCH --time=0-0:30:00
+#SBATCH --output=SimulatedERGM-yeast-tf-simple_akttonly-%j.out
+#SBATCH --error=SimulatedERGM-yeast-tf-simple_akttonly-%j.err
 
 echo -n "started at: "; date
 
 ROOT=${HOME}/EstimNetDirected
 
-module load R
+echo "*** Remember must 'module load R/3.2.5' to get Microsoft R Open 3.2.5 otherwise nothing in R works! (doing that now) ***"
+echo
+module load R/3.2.5
+
 
 rm simulation_estimated_yeast_transcription_simple_akttonly_*.net
 
