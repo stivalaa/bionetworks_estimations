@@ -66,7 +66,6 @@ simNetFilePrefix = simulation_estimated_yeast_transcription_simple_akttonly
 # Structural parameters
 #
 
- # note no reciprocated arcs in data
 structParams =  {Arc                  = -10.57769,
 	         AltInStars           = 0.346533,
 		 AltOutStars          = 2.860092,
