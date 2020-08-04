@@ -93,9 +93,8 @@ simNetFilePrefix = sim_yeast_transcription
 # Structural parameters
 #
 
-structParams =  { AltInStars, AltOutStars, Sink, Source,
-                 AltTwoPathsTD,
-                 AltKTrianglesT, AltKTrianglesC}
+structParams =  { Reciprocity, AltInStars, AltOutStars, Sink, Source,
+                 AltTwoPathsT, AltKTrianglesT }
 
 #
 # Attribute parameters
