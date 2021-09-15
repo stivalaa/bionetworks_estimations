@@ -1,0 +1,39 @@
+Human PPI network from HIPPIE (v2.2) estimated with SMNet
+
+ADS
+Sun Jun 13 03:41:30 CEST 2021
+
+HIPPIE (Human Integrated Protein-Protein Interaction rEference) PPI data
+downloaded from http://cbdm.uni-mainz.de/hippie/ on 12 June 2021
+with 
+  wget http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/hippie_current.txt
+  wget http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/HIPPIE-current.mitab.txt
+for resprectively HIPPIE tsv format and PSI-MITAB 2.5 format
+(http://psicquic.github.io/MITAB25Format.html).
+
+As per download page http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php
+current version is v2.2 last updated 02/14/19
+
+See also HIPPIE_download_page.pdf (saved from 
+http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php) and
+HIPPIE_informatino_page.pge (saved from
+http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/information.php).
+
+List of scores assigned to experimental techniques (used to score the 
+interactions in HIPIE) downloaded from
+http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/RS/experimental_scores.tsv
+
+Citations for HIPPIE:
+
+
+    Schaefer MH, Fontaine J-F, Vinayagam A, Porras P, Wanker EE, et al. (2012) HIPPIE: Integrating Protein Interaction Networks with Experiment Based Quality Scores. PLoS ONE, 7(2): e31826 [link]
+
+    Schaefer MH, Lopes TJS, Mah N, Shoemaker JE, Matsuoka Y, et al. (2013) Adding Protein Context to the Human Protein-Protein Interaction Network to Reveal Meaningful Interactions. PLoS Computational Biology, 9(1): e1002860 [link]
+
+    Suratanee A, Schaefer MH, Betts M, Soons Z, Mannsperger H, et al. (2014) Characterizing Protein Interactions Employing a Genome-Wide siRNA Cellular Phenotyping Screen. PLoS Computational Biology, 10.9: e1003814 [link]
+
+    Alanis-Lobato G, Andrade-Navarro MA, & Schaefer MH. (2016). HIPPIE v2.0: enhancing meaningfulness and reliability of protein-protein interaction networks. Nucleic Acids Research, gkw985 [link]
+
+ADS
+
+Sat Jun 12 07:29:45 CEST 2021

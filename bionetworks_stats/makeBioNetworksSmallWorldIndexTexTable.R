@@ -30,14 +30,15 @@ library(optparse)
 
 graphs <- c(
     "../undirected/arabidopsis_interactome/arabadopsis_interactome_edgelist.txt",
-    "../undirected/yeast/yeast_edgelist.txt",
+    "../undirected/yeast/model1/yeast_edgelist.txt",
     "../undirected/human_interactome/human_interactome_edgelist.txt",
+    "../undirected/hippie/model1/hippie_ppi_high_edgelist.txt",
     "../undirected/worm_ppi/worm_ppi_edgelist.txt",
     "../ecoli/estimnetdirected/ecoli1_arclist.txt",
     "../gerstein_ecoli/ecoli_arclist.txt",
     "../alon_yeast_transcription/yeast_transcription_arclist.txt",
     "../gerstein_yeast/yeast_arclist.txt",
-    "../fly_medulla/fly_medulla_arclist.txt",
+    "../fly_medulla/model1/fly_medulla_arclist.txt",
     "../mouse_retina_undirected/mouse_retina_1.graphml" # not really directed
     )
 
@@ -46,6 +47,7 @@ descrs <- c(
     "\\textit{A.~thaliana} PPI",
     "Yeast PPI",
     "Human PPI",
+    "Human PPI (HIPPIE)",
     "\\textit{C. elegans} PPI",
     "Alon \\textit{E.~coli} regulatory",
     "Gerstein \\textit{E.~coli} regulatory",

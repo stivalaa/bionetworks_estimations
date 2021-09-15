@@ -12,9 +12,7 @@ echo -n "started at: "; date
 
 ROOT=${HOME}/EstimNetDirected
 
-echo "*** Remember must 'module load R/3.2.5' to get Microsoft R Open 3.2.5 otherwise nothing in R works! (doing that now) ***"
-echo
-module load R/3.2.5
+module load r
 
 
 time Rscript ${ROOT}/scripts/plotEstimNetDirectedSimFit.R yeast_transcription_arclist.txt sim_yeast_transcription

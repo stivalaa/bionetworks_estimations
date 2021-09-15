@@ -34,12 +34,14 @@ source_local <- function(fname){
 #      g - igraph graph object
 #      title - text for main graph title
 #      directed - False for undirected graph
-#      useoutdegree - True for out degree, else in degree
+#      useoutdegree - TRUE for out degree, else in degree
+#      compute_pvalue - TRUE to compute p-value by bootstrap (default TRUE)
+#                       Else p-value not computed (so very vast, only 1 core)
 #
 # Return value: None. Does an R plot,, with no device or dev.off(), so
 #               can be called multiple times with par(mfrow=c(3,3)) etc.
 #
-plot_power_law <- function(g, title, directed, useoutdegree) {
+plot_power_law <- function(g, title, directed, useoutdegree, compute_pvalue=TRUE) {
 	# fit power-law distribution
   if (directed) {
     if (useoutdegree) {
@@ -57,8 +59,10 @@ plot_power_law <- function(g, title, directed, useoutdegree) {
 	print(pl_m)
 
 	# get p-value from bootstrap
-	bs_p <- bootstrap_p(pl_m, no_of_sims=bootstrap_num_sims, threads=bootstrap_num_threads, seed=1)
-	cat("powerlaw bootstrap p-value = ", bs_p$p, "\n")
+        if (compute_pvalue) {
+   	 	bs_p <- bootstrap_p(pl_m, no_of_sims=bootstrap_num_sims, threads=bootstrap_num_threads, seed=1)
+		cat("powerlaw bootstrap p-value = ", bs_p$p, "\n")
+	}
 
 	# fit log-normal distribution
 	ln_m <- dislnorm$new(dd)
@@ -71,8 +75,10 @@ plot_power_law <- function(g, title, directed, useoutdegree) {
               skipln <- TRUE
         } else {
 		# get p-value from bootstrap
-		ln_bs_p <- bootstrap_p(ln_m, no_of_sims=bootstrap_num_sims, threads=bootstrap_num_threads, seed=1)
-		cat("log-normal bootstrap p-value = ", ln_bs_p$p, "\n")
+		if (compute_pvalue) {
+			ln_bs_p <- bootstrap_p(ln_m, no_of_sims=bootstrap_num_sims, threads=bootstrap_num_threads, seed=1)
+			cat("log-normal bootstrap p-value = ", ln_bs_p$p, "\n")
+		}
 
 		if (est_ln$xmin != est_pl$xmin) {
 				cat("WARNING: powerlaw Xmin = ", est_pl$xmin, 

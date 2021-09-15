@@ -5,4 +5,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=20
 
+module load r
+
 time make -f Makefile.smallworldtables

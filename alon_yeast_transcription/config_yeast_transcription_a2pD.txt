@@ -30,7 +30,7 @@ samplerSteps= 1000 # sampler iterations (per algorithm step)
 Ssteps =100 # steps of Algorithm S (multiplied by density adjustment)
 
 
-EEsteps= 6000 # steps of Algorithm EE. 
+EEsteps= 2000 # steps of Algorithm EE. 
               # At each of these outer iterations, the theta step size
               # is adjusted (according to compC) to limit the variance
               # of the theta values.
@@ -99,8 +99,8 @@ observedStatsFilePrefix = obs_stats_yeast_transcription_a2pD
 # Structural parameters
 #
 
-structParams =  {  AltInStars, AltOutStars, Sink, Source,
-                  AltKTrianglesT, AltTwoPathsD}
+structParams =  {  AltInStars, AltOutStars(4.5), AltTwoPathsT(1.5),
+                  AltKTrianglesT(1.5), AltTwoPathsD(1.5)}
 
 #
 # Attribute parameters

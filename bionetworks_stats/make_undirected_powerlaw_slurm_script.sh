@@ -8,6 +8,8 @@
  
 echo -n "Started at: "; date
 
+module load r
+
 rm undirected_bionetworks_powerlaw.eps
 
 time Rscript plotUndirectedBionetworksPowerLaw.R | tee undirected_bionetworks_powerlaw.out

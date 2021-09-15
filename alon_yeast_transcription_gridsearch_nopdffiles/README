@@ -1,0 +1,78 @@
+Running estimation of Alon yeast transcription network with varyin gvalues
+of lambda decay hyperparameter as suggested by reviewer.
+
+Slurm script run in loop with lambda varying (note a2p and akt same value,
+also not varyig ains only aouts). Slurm script fo rboth estimations and then
+GoF simulation from those estimations.
+
+The mahalanobis.sh gets Mahalanobis distance of sufficient statistics
+and mahalanobis_graphstats.sh gets Mahalanobis distance of selected graph
+statistics (both between simulated [GoF] and observed) [output in corresponding
+.out files saved].
+
+Note that using the sufficient statistics isn't much use, get top one
+(lowest Mahalanobis distance) as the dfeault 2.0 values for both lambda - 
+seem as intiial experiments usnig least maximum t-ratio, median or mean
+maximum t-ratio. Maybe unsurprising as they are just measuring the GoG on
+statistics explicitly in the model - no piont having 'better' GoF on these,
+as long as they are in the acceptable range.
+
+So mahalanobis_graphstats.sh (usese the new statsEstimNetDirectedSimFit.R
+script in estimNetdirected/scripts/ written for this purpose) is much more usefful:
+measures MAhalanobis distance on (truncated) degree distribution, clustering
+coefficients, etc. Now we find that:
+
+
+[stivala@icslogin01 alon_yeast_transcription_gridsearch_nopdffiles]$ cat mahalanobis_graphstats.out | awk '{print $3}'|histogram.py
+invalid line 'Mahalanobis\n'
+# NumSamples = 64; Min = 67.79; Max = 91.03
+# Mean = 79.028039; Variance = 32.088294; SD = 5.664653; Median 77.596660
+# each * represents a count of 1
+   67.7929 -    70.1169 [     2]: **
+   70.1169 -    72.4409 [     6]: ******
+   72.4409 -    74.7649 [     7]: *******
+   74.7649 -    77.0889 [    12]: ************
+   77.0889 -    79.4129 [    11]: ***********
+   79.4129 -    81.7369 [     8]: ********
+   81.7369 -    84.0609 [     2]: **
+   84.0609 -    86.3849 [     6]: ******
+   86.3849 -    88.7089 [     8]: ********
+   88.7089 -    91.0329 [     2]: **
+
+
+
+[stivala@icslogin01 alon_yeast_transcription_gridsearch_nopdffiles]$ cat mahalanobis_graphstats.out | sort -k3,3n|head
+aouts_lambda aktt_lambda Mahalanobis
+4.5 1.5 67.79291
+4.5 2.0 70.03941
+4.0 2.0 70.41147
+5.0 3.5 71.04892
+3.5 3.5 71.33679
+3.5 1.5 71.66374
+3.5 5.0 72.12751
+4.5 5.0 72.29529
+5.0 4.5 72.72636
+
+[stivala@icslogin01 alon_yeast_transcription_gridsearch_nopdffiles]$ cat mahalanobis_graphstats.out | sort -k3,3n | grep -n '^4.5 3.0'
+15:4.5 3.0 74.15867
+[stivala@icslogin01 alon_yeast_transcription_gridsearch_nopdffiles]$ cat mahalanobis_graphstats.out | sort -k3,3n | grep -n '^2.0 2.0'
+48:2.0 2.0 82.69454
+[stivala@icslogin01 alon_yeast_transcription_gridsearch_nopdffiles]$
+
+
+So 'best' one is aouts_lambda=4.5, aktt_lambda=1.5
+the default one (both 2.0) is rank 48 (of 64), and the one heuristically
+chosen (aouts_lambda=4.5, aktt_lambda=3.0) is rank 15. 
+
+So this technique seems to work OK, albeit the whole idea of running large
+numbes of estimations liek this to tune hyperparameters is dubious 
+statistically: this is akin to 'automatic model selection' (chaning 
+hyperparmaeters here is like  adding or subtracting ters n the model) 
+by 'optimziing' AIC or R^2 etc.
+
+Note also not saving all the .pdf,  .net etc. files here (at least on
+the Google Drive cop)y) as huge numbers of files (casuses problems on Windows 10
+and/or Google Drive, also nearly 9 GB)
+
+ADS
+Sun Sep 12 01:49:19 CEST 2021
