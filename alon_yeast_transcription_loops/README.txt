@@ -1,0 +1,75 @@
+Yeast transcription network downloaded from
+
+http://www.weizmann.ac.il/mcb/UriAlon/download/collection-complex-networks
+
+http://www.weizmann.ac.il/mcb/UriAlon/sites/mcb.UriAlon/files/uploads/CollectionsOfComplexNetwroks/yeastinter_st.txt-complex-networks
+http://www.weizmann.ac.il/mcb/UriAlon/sites/mcb.UriAlon/files/uploads/CollectionsOfComplexNetwroks/yeastdata.mat
+http://www.weizmann.ac.il/mcb/UriAlon/sites/mcb.UriAlon/files/uploads/CollectionsOfComplexNetwroks/yeastreadme.doc
+
+on
+
+April 29, 2019.
+
+
+
+ADS.
+
+
+
+
+
+Jump to Navigation
+Uri Alon lab Design Principles in Biology Weizmann Institute of Science Department of Molecular Cell Biology
+COLLECTION OF COMPLEX NETWORKS
+Convention used: the files give a list of the edges in the network. The first column is the source of the edge (e.g. regulating gene), the second column is the target of the edge (e.g. regulated gene).
+ 
+
+E. coli transcription networks - coli1_1Inter_st.txt , coliNodesDictionary.txt, more info and link to image of network,
+links to regulonDB site: Main-Page, and Public Datasets.
+[Older version and more data: Version 1.0 (As published Shen-Orr et. al, Nature Gen. 2002), Version 1.1 (As published Mangan et. al. PNAS 2003)]
+ 
+
+Yeast transcription network - yeastInter_st.txt , yeastData.mat , yeastReadme.doc (see also: Science 2002, pdf)
+ 
+
+Social networks of positive sentiment - social1Inter_st.txt , social3Inter_st.txt (see also: Science 2004, pdf)
+ 
+
+Electronic circuits - s208_st.txt , s420_st.txt , s838_st.txt
+(more electronic circuits can be found at: ISCAS 89, see also: Science 2004, pdf)
+ 
+
+Languages: word adjacency networks - English , French , Spanish , Japanese (see also: Science 2004, pdf)
+ 
+
+Protein Structure - protein-structure-1 , protein-structure-2 , protein-structure-3 (see also: Science 2004, pdf)
+ 
+
+B. subtilis transcription network - based on dbtbs.hgc.jp
+ 
+
+C. elegans - neuronal synaptic circuitry network see: http://www.wormatlas.org/neuronsandcircuits.html
+ 
+
+WWW - available at http://www3.nd.edu/~networks/resources.htm
+ 
+
+Internet - at the level of autonomous systems available at   http://www.cosinproject.org/
+
+Home
+Research Activities
+Publications
+People
+Gallery
+Movies
+Downloadable Materials
+Contact Us
+Network Motif Software
+Pareto Front Software
+Downloadable data
+Pareto Task Inference (ParTI) method
+Collection of complex networks
+Dual Kinect Software
+Systems Biology course 2018
+Systems Medicine course 2019
+26 Apr, 2019 | GMT+03:00

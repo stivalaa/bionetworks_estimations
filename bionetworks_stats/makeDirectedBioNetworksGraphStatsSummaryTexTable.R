@@ -49,6 +49,8 @@ graphs <- c(
     "../ecoli/estimnetdirected/ecoli1_arclist.txt",
     "../gerstein_ecoli/ecoli_arclist.txt",
     "../alon_yeast_transcription/yeast_transcription_arclist.txt",
+    "../alon_yeast_transcription_loops/yeast_arclist_noloops.txt",
+    "../alon_yeast_transcription_loops/yeast_arclist_loops.txt",
     "../gerstein_yeast/yeast_arclist.txt",
     "../fly_medulla/model1/fly_medulla_arclist.txt",
     "../mouse_retina_undirected/mouse_retina_1.graphml" # not really directed
@@ -64,6 +66,8 @@ descrs <- c(
     "Alon \\textit{E.~coli} regulatory",
     "Gerstein \\textit{E.~coli} regulatory",
     "Alon yeast regulatory",
+    "Alon yeast (MATLAB)",
+    "Alon yeast (MATLAB, loops)",
     "Gerstein yeast regulatory",
     "\\textit{Drosophila} optic medulla",
     "Mouse retina neural network" # not really directed

@@ -1,0 +1,20 @@
+Call:
+ergm(formula = gn ~ edges + gwidegree(2, fixed = TRUE) + gwodegree(0, 
+    fixed = TRUE) + dgwesp(log(2), fixed = TRUE, type = "OTP") + 
+    dgwdsp(log(2), fixed = TRUE, type = "OTP"), control = control.ergm(main.method = "Stepping"))
+
+Hummel Stepping Maximum Likelihood Results:
+
+                                  Estimate Std. Error MCMC % z value Pr(>|z|)    
+edges                             -3.11255    0.07699      0 -40.426  <0.0001 ***
+gwideg.fixed.2                    -3.95392    0.12426      0 -31.819  <0.0001 ***
+gwodeg.fixed.0                     1.58849    0.18432      0   8.618  <0.0001 ***
+gwesp.OTP.fixed.0.693147180559945  2.37752    0.20110      0  11.823  <0.0001 ***
+gwdsp.OTP.fixed.0.693147180559945 -0.49329    0.07661      0  -6.439  <0.0001 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+     Null Deviance: 247462  on 178506  degrees of freedom
+ Residual Deviance:   5435  on 178501  degrees of freedom
+ 
+AIC: 5445  BIC: 5495  (Smaller is better. MC Std. Err. = 7.211)
