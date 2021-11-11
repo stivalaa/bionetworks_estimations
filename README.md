@@ -12,4 +12,4 @@ The EstimNetDirected software for estimating ERGM parameters for directed networ
 The Estimnet software for estimating ERGM parameters for undirected networks is available from http://www.estimnet.org/.
 
 ## References
-Stivala, A. & Lomi, A. (2021). Testing biological network motif significance with exponential random graph models. arXiv preprint arXiv:2001.11125 https://arxiv.org/abs/2001.11125
+Stivala, A. & Lomi, A. (2021). Testing biological network motif significance with exponential random graph models. _Applied Network Science_ (accepted manuscript). https://arxiv.org/abs/2001.11125
