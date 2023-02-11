@@ -7,7 +7,7 @@ Analysis of the structure of biological networks often uses statistical tests to
 
 The data and scripts in this repository were imported from the ergm_bionetworks_data_scripts.tar.gz archive available from https://sites.google.com/site/alexdstivala/home/ergm_bionetworks.
 
-The EstimNetDirected software for estimating ERGM parameters for directed networks is available from https://sites.google.com/site/alexdstivala/home/estimnetdirected or GitHub: https://github.com/stivalaa/EstimNetDirected.
+The EstimNetDirected software for estimating ERGM parameters for directed networks (which now also handles undirected and bipartite networks) is available from https://sites.google.com/site/alexdstivala/home/estimnetdirected or GitHub: https://github.com/stivalaa/EstimNetDirected.
 
 The Estimnet software for estimating ERGM parameters for undirected networks is available from https://web.archive.org/web/20221007014617/http://www.estimnet.org/.
 
