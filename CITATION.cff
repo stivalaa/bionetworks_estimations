@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Stivala"
+  given-names: "Alex"
+  orcid: "https://orcid.org/0000-0002-2442-4743"
+- family-names: "Lomi"
+  given-names: "Alessandro"
+title: "Testing biological network motif significance with exponential random graph models"
+url: "https://github.com/stivalaa/bionetworks_estimations"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Stivala"
+      given-names: "Alex"
+      orcid: "https://orcid.org/0000-0002-2442-4743"
+    - family-names: "Lomi"
+      given-names: "Alessandro"
+  title: "Testing biological network motif significance with exponential random graph models"
+  doi: 10.1007/s41109-021-00434-y
+  journal: Applied Network Science
+  year: 2021
+  volume: 6
+  start: 91
