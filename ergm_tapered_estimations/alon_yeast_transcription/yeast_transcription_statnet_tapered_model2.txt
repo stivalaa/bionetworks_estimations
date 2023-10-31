@@ -1,0 +1,17 @@
+ Results:
+
+                 Estimate Std. Error MCMC % z value Pr(>|z|)    
+edges            -3.80679    0.06637      0 -57.353  <0.0001 ***
+gwideg.fixed.0.5  1.01743    0.15839      0   6.424  <0.0001 ***
+gwodeg.fixed.1.5 -4.52401    0.08038      3 -56.282  <0.0001 ***
+ttriple           1.38746    0.69362     88   2.000   0.0455 *  
+twopath          -0.33205    0.08096     71  -4.101  <0.0001 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+The estimated tapering scaling factor is 1.861.
+
+
+     Null Deviance: 655240  on 472656  degrees of freedom
+ Residual Deviance:  11678  on 472651  degrees of freedom
+ 
+AIC: 11690  BIC: 11756  (Smaller is better. MC Std. Err. = 0)

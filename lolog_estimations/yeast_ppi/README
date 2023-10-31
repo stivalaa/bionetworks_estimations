@@ -1,0 +1,11 @@
+Yeast PPI lolog estimations not converging after 48 hours (max time limit
+on ICS cluster); note also using huge amounts of memory (slowly and steadily
+growing, up to full memory 120GB+ on 'fat' nodes; may be a bug?):
+
+system.time( yeast_ppi_lolog_model1 <- lolog(yeast_ppi ~ edges + twoPath + triangles + gwdegree(.2) +  nodeMatch('class')) )
+
+system.time( yeast_ppi_lolog_model2 <- lolog(yeast_ppi ~ edges + twoPath + triangles + gwdegree(.2)) )
+
+
+ADS
+Mon Jun 14 01:10:04 CEST 2021

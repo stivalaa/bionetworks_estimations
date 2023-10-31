@@ -45,10 +45,12 @@ echo "% On: " `uname -a`
 
 echo '\begin{tabular}{lrrr}'
 echo '\hline'  
-echo 'Effect & Estimate & Std. errror & p-value\\'
+echo 'Effect & Estimate & Std. error & p-value\\'
 echo '\hline'
 
-tail -n+2  ${estimationresults} | awk '{printf("%s & $%.4f$ & $%.4f$ & $%g$ \\\\\n",$1,$3,$4,$5)}'
+#tail -n+2  ${estimationresults} | awk '{printf("%s & $%.4f$ & $%.4f$ & $%g$ \\\\\n",$1,$3,$4,$5)}'
+
+tail -n+2  ${estimationresults} | awk '{printf("%s & $%.4f$ & $%.4f$ & $%s$ \\\\\n",$1,$3,$4, (sprintf("%g", $5) < 0.001 ? "< 0.001" : sprintf("%g", $5)))}'
 
 echo '\hline'  
 echo '\end{tabular}'

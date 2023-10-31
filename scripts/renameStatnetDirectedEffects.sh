@@ -16,5 +16,5 @@ if [ $# -ne 0 ]; then
     exit 1
 fi
 
-sed 's/edges/Edges/g;s/gwesp[.]OTP[.]fixed[.]\([0-9.]*\)/GWESP OTP ($\\alpha = \1$)/g;s/gwdsp[.]OTP[.]fixed[.]\([0-9.]*\)/GWDSP OTP ($\\alpha = \1$)/g;s/absdiff[.]\([a-z]*\)/Heterophily \1/g;s/gwodeg[.]fixed[.]\([0-9.]*\)/GW out-degree ($\\alpha = \1$)/g;s/gwideg[.]fixed[.]\([0-9.]*\)/GW in-degree ($\\alpha = \1$)/g;s/mutual/Reciprocity/g;s/nodematch[.]\(.*\)/Nodematch \1/g;s/0[.]693147180559945/0.693/g'
+sed 's/edges/Edges/g;s/gwesp[.]OTP[.]fixed[.]\([0-9.]*\)/GWESP OTP ($\\alpha = \1$)/g;s/gwdsp[.]OTP[.]fixed[.]\([0-9.]*\)/GWDSP OTP ($\\alpha = \1$)/g;s/absdiff[.]\([a-z]*\)/Heterophily \1/g;s/gwodeg[.]fixed[.]\([0-9.]*\)/GW out-degree ($\\alpha = \1$)/g;s/gwideg[.]fixed[.]\([0-9.]*\)/GW in-degree ($\\alpha = \1$)/g;s/mutual/Reciprocity/g;s/nodematch[.]\(.*\)/Nodematch \1/g;s/0[.]693147180559945/0.693/g;s/nodecov[.]\(.*\)/Nodecov \1/g;s/twopath/Two-paths/g;s/ttriple/Transitive triples/g;s/gwdsp.fixed.\([0-9.]*\)/GWDSP ($\\alpha = \1$)/g'
 

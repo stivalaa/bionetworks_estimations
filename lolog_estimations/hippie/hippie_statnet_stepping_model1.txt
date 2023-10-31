@@ -1,0 +1,20 @@
+Call:
+ergm(formula = gn ~ edges + gwdegree + gwesp + gwdsp, control = control.ergm(main.method = "Stepping"))
+
+Hummel Stepping Maximum Likelihood Results:
+
+                   Estimate   Std. Error MCMC % z value Pr(>|z|)    
+edges          -1.053121980  0.852207539      0  -1.236    0.217    
+gwdegree        0.249880953  0.041473285      0   6.025  <0.0001 ***
+gwdegree.decay  0.003223244  0.151631290      0   0.021    0.983    
+gwesp          -0.001147553  0.746314802      0  -0.002    0.999    
+gwesp.decay     0.000090901  0.000428287      0   0.212    0.832    
+gwdsp          -0.290440925  0.012265908      0 -23.679  <0.0001 ***
+gwdsp.decay     0.000005511  0.309230155      0   0.000    1.000    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+     Null Deviance: 91931953  on 66314886  degrees of freedom
+ Residual Deviance:  1308395  on 66314879  degrees of freedom
+ 
+AIC: 1308409  BIC: 1308521  (Smaller is better. MC Std. Err. = 4771)
