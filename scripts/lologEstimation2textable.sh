@@ -2,7 +2,7 @@
 #
 # File:    lologEstimation2textable.sh
 # Author:  Alex Stivala
-# Created: January 2014
+# Created: September 2021
 #
 # Read last estimation result from a latent order logistic (lolog)
 # as produced by the summary() method on a lolog model in the
