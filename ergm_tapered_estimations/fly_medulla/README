@@ -1,0 +1,51 @@
+
+Network of synaptic interactions among neurons in the Drosophilla optic medulla.
+
+Found on Index of Complex Networks (ICON) https://icon.colorado.edu/#!/networks
+citation for which is
+
+Aaron Clauset, Ellen Tucker and Matthias Sainz, "The Colorado Index of Complex Networks."  https://icon.colorado.edu/ (2016).
+
+Fly medulla (2013)
+Biological
+Connectome
+
+Description
+Network of synaptic interactions among neurons in the Drosophilla optic medula
+Network summary
+Edge Type
+Synaptic interaction
+Node Type
+Neuron
+Avg Edges
+33,641.00
+Avg Nodes
+1,781.00
+Graph properties
+Directed, Unweighted, Locations
+Citation
+S. Takemura et al., "A visual motion detection circuit suggested by Drosophila connectomics." Nature 500, 175-181 (2013). Link
+Hosted by
+Data hosted by the OpenConnectome project
+Network data
+Name	Nodes	Edges	File Size	File Type	Format	Source
+(Fly) drosophila_medulla_1	1781	33641	11.80mb	txt	graphML	Link
+
+
+Link above is to 	http://openconnecto.me/graph-services/download/
+
+Fly
+	Download url	region	# Nodes	# Edges	Graph Attrs	Node Attrs	Edge Attrs	sensor	project	Source host url
+	Drosophila_medulla_1	medulla	1781	33641	info, source, region, DOI, sensor	name, id	post.z, post.x, post.y, pre.x, pre.y, pre.z, proofreading.details	Electron Microscopy	—	www.nature.com
+1 graph download model
+
+
+download GraphML 16/11/2016
+
+Ref paper: http://www.nature.com/nature/journal/v500/n7461/full/nature12450.html
+
+Takemura, S.Y., Bharioke, A., Lu, Z., Nern, A., Vitaladevuni, S., Rivlin, P.K., Katz, W.T., Olbris, D.J., Plaza, S.M., Winston, P. and Zhao, T., 2013. A visual motion detection circuit suggested by Drosophila connectomics. Nature, 500(7461), pp.175-181.
+
+
+ADS
+Wed, Nov 16, 2016  9:15:53 AM
