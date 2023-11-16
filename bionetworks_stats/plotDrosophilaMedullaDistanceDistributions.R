@@ -131,3 +131,6 @@ dtab <- table(all_pairwise_distances)
 plot(as.numeric(names(dtab)), 1-cumsum(as.numeric(dtab)/length(dtab)), log='xy', xlab=expression("Distance (" * mu * "m)"), ylab='CDF', ylim=c(0.00001,1), xlim=c(1, 10000), type='l')
 dev.off()
 
+
+print(t.test(all_edge_distances, all_pairwise_distances, paired=FALSE))
+print(wilcox.test(all_edge_distances, all_pairwise_distances, paired=FALSE))
