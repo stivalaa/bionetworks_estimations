@@ -15,7 +15,8 @@ library(poweRlaw)
 options(scipen=999)  # try to force decimals not scientific notation
 
 bootstrap_num_sims <- 1000
-bootstrap_num_threads <- 20
+#bootstrap_num_threads <- 20
+bootstrap_num_threads <- 6
 
 
 # read in R source file from directory where this script is located

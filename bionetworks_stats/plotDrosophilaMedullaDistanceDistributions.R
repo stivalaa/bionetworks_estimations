@@ -43,6 +43,16 @@
 # Unlike that paper, however, we do NOT remove the highest-degree node(s),
 # but self-loops ARE removed (statnet ergm cannot handle them).
 #
+#
+# Note that the units of the co-ordinates (x, y, z) in the graphml file
+# are not defined. But the Supplementary Information of Takemura
+# et al. (2013) Section 3 "Supplementary Tables" has a not (3)
+# desribing them as "pixel coordinates in the xy plane) and the section
+# number (in the z axis)". Sections are 40nm nomiinally (mean 42 nm
+# sd 6 nm), see S.I section 2 Supplemntary Methods.
+# So these co-ordinates are on the scale of nm (or tens of nm),
+# but not exactly nm [and certainly not microns (um) as assumed
+# in Agarwala et al. (2023)].
 
 library(igraph)
 
@@ -117,18 +127,18 @@ postscript(output_postscript_filename,
 par(mfrow=c(2, 2))
 
 # histogram
-hist(all_edge_distances, xlab=expression("Distance (" * mu * "m)"), main='Drosophila medulla synapse distances')
+hist(all_edge_distances, xlab=expression("Distance"), main='Drosophila medulla synapse distances')
 abline(v = mean(all_edge_distances), col = 'blue')
 # cumulative distribution, log-log plot
 dtab <- table(all_edge_distances)
-plot(as.numeric(names(dtab)), 1-cumsum(as.numeric(dtab)/length(dtab)), log='xy', xlab=expression("Distance (" * mu * "m)"), ylab='CDF', ylim=c(0.00001,1), xlim=c(1, 10000), type='l')
+plot(as.numeric(names(dtab)), 1-cumsum(as.numeric(dtab)/length(dtab)), log='xy', xlab=expression("Distance"), ylab='CDF', ylim=c(0.00001,1), xlim=c(40, 10000), type='l')
 
 # histogram
-hist(all_pairwise_distances, xlab=expression("Distance (" * mu * "m)"), main='Drosophila medulla all pairwise neuron distances')
+hist(all_pairwise_distances, xlab=expression("Distance"), main='Drosophila medulla all pairwise neuron distances')
 abline(v = mean(all_pairwise_distances), col = 'blue')
 # cumulative distribution, log-log plot
 dtab <- table(all_pairwise_distances)
-plot(as.numeric(names(dtab)), 1-cumsum(as.numeric(dtab)/length(dtab)), log='xy', xlab=expression("Distance (" * mu * "m)"), ylab='CDF', ylim=c(0.00001,1), xlim=c(1, 10000), type='l')
+plot(as.numeric(names(dtab)), 1-cumsum(as.numeric(dtab)/length(dtab)), log='xy', xlab=expression("Distance"), ylab='CDF', ylim=c(0.00001,1), xlim=c(40, 10000), type='l')
 dev.off()
 
 

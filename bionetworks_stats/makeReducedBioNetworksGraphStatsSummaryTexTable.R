@@ -47,6 +47,7 @@ graphs <- c(
     "../ecoli/estimnetdirected/ecoli1_arclist.txt",
     "../alon_yeast_transcription/yeast_transcription_arclist.txt",
     "../cook_celegans/CelegansMaleChem/GMaleChem_arclist.txt",
+    "../lolog_estimations/kaiser_celegans277/celegans277.net",
     "../ergm_tapered_estimations/fly_medulla/drosophila_medulla_1_named_arclist.txt"
     )
 
@@ -56,7 +57,8 @@ descrs <- c(
     "Human PPI (HIPPIE)",
     "Alon \\textit{E.~coli} regulatory",
     "Alon yeast regulatory",
-    "\\textit{C.~elegans} neural",
+    "Cook \\textit{C.~elegans} connectome",
+    "Kaiser \\textit{C.~elegans} neural",  
     "\\textit{Drosophila} medulla (named)"
     )
 
