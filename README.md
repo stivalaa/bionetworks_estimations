@@ -26,7 +26,7 @@ The ergm.tapered R package is available via GitHub at https://github.com/statnet
 
 ## References
 
-Stivala, A. (2023). New network models facilitate analysis of biological networks. (Manuscript in preparation)
+Stivala, A. (2023). New network models facilitate analysis of biological networks. arXiv preprint arXiv:2312.06047 https://arxiv.org/abs/2312.06047
 
 Stivala, A. & Lomi, A. (2021). Testing biological network motif significance with exponential random graph models. _Applied Network Science_ 6:91. https://doi.org/10.1007/s41109-021-00434-y
 
