@@ -12,6 +12,10 @@ Exponential-family random graph models (ERGMs) are a family of network models or
 ## Software
 
 The data and scripts in this repository were originally imported from the ergm_bionetworks_data_scripts.tar.gz archive available from https://sites.google.com/site/alexdstivala/home/ergm_bionetworks.
+Also available from Zenodo with DOI:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17993364.svg)](https://doi.org/10.5281/zenodo.17993364)
+
 
 The EstimNetDirected software for estimating ERGM parameters for directed networks (which now also handles undirected and bipartite networks) is available from https://sites.google.com/site/alexdstivala/home/estimnetdirected or GitHub: https://github.com/stivalaa/EstimNetDirected.
 
